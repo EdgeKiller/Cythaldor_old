@@ -20,10 +20,7 @@ namespace Cythaldor
             this.id = id;
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 position)
-        {
-            spriteBatch.Draw(Resources.tileset, position, new Rectangle(id * 32, 0, 32, 32), Color.White);
-        }
+
 
     }
 }

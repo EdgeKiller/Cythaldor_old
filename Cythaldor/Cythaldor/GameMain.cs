@@ -14,9 +14,11 @@ namespace Cythaldor
     class GameMain
     {
 
+        Map map;
+
         public GameMain()
         {
-           
+            map = new Map();
  
         }
 
@@ -28,7 +30,9 @@ namespace Cythaldor
 
         public void Draw(SpriteBatch spriteBatch)
         {
-
+            spriteBatch.Begin();
+            map.Draw(spriteBatch);
+            spriteBatch.End();
 
         }
 
