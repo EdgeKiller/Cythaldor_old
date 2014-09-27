@@ -18,19 +18,19 @@ namespace Cythaldor
 
         public static void Update(KeyboardState keyboard)
         { 
-            if(keyboard.IsKeyDown(Keys.Z))
+            if(keyboard.IsKeyDown(Settings.Key.CameraUp))
             {
                 position.Y -= Settings.Camera.Speed;
             }
-            if (keyboard.IsKeyDown(Keys.S))
+            if (keyboard.IsKeyDown(Settings.Key.CameraDown))
             {
                 position.Y += Settings.Camera.Speed;
             }
-            if (keyboard.IsKeyDown(Keys.Q))
+            if (keyboard.IsKeyDown(Settings.Key.CameraLeft))
             {
                 position.X -= Settings.Camera.Speed;
             }
-            if (keyboard.IsKeyDown(Keys.D))
+            if (keyboard.IsKeyDown(Settings.Key.CameraRight))
             {
                 position.X += Settings.Camera.Speed;
             }

@@ -8,11 +8,16 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.IO;
 
 namespace Cythaldor
 {
     public static class Settings
     {
+        
+
+
+
         //MAP
         public static class Map
         {
@@ -46,7 +51,42 @@ namespace Cythaldor
             public static string GameCreator = "EdgeKiller";
             public static string GameName = "Cythaldor";
         }
-        
+       
+        //KEYS FROM CONFIG FILE
+        public static class Key
+        {
+            public static Dictionary<string, Keys> KeysDic = new Dictionary<string, Keys>()
+            {
+                {"KEY_UP", Keys.Up}, {"KEY_DOWN", Keys.Down}, {"KEY_LEFT", Keys.Left}, {"KEY_RIGHT", Keys.Right}
+            };
+            
+            //CAMERA KEYS
+            public static Keys CameraUp = KeysDic[ReadFromConfig("CAMERA_KEY_UP")];
+            public static Keys CameraDown = KeysDic[ReadFromConfig("CAMERA_KEY_DOWN")];
+            public static Keys CameraLeft = KeysDic[ReadFromConfig("CAMERA_KEY_LEFT")];
+            public static Keys CameraRight = KeysDic[ReadFromConfig("CAMERA_KEY_RIGHT")];
+            
+            
+            
+        }
+
+        //READ SOMETHING FROM CONFIG FILE : "config.cfg"
+        static public string ReadFromConfig(string Param)
+        {
+            StreamReader sr = new StreamReader("config.cfg");
+            string line;
+            string result = "";
+            while((line = sr.ReadLine()) != null)
+            {
+                if(line.StartsWith(Param))
+                {
+                    result = line.Split('=')[1];
+                }
+            }
+            return result;
+        }
+
+
 
     }
 }
