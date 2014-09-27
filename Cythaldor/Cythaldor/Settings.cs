@@ -11,15 +11,19 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Cythaldor
 {
-    class TileGround : Tile
+    public static class Settings
     {
+        //MAP
 
-        public TileGround(int id) : base(id)
-        {
 
-        }
+        //CAMERA
 
-        
+
+        //WINDOWS GAME
+        public static bool MouseVisible = true;
+        public static bool FullScreen = true;
+        public static int WindowHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+        public static int WindowWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
 
 
     }

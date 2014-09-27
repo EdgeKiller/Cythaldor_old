@@ -20,7 +20,5 @@ namespace Cythaldor
             this.id = id;
         }
 
-
-
     }
 }
