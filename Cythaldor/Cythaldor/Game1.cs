@@ -18,7 +18,6 @@ namespace Cythaldor
 
         public Game1()
         {
-            //TEST
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
