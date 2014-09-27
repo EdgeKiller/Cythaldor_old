@@ -31,6 +31,8 @@ namespace Cythaldor
 
         protected override void Initialize()
         {
+            Window.Title = Settings.GameName + " - " + Settings.GameVersion + " - " +
+                Settings.GameCreator;
             IsMouseVisible = Settings.MouseVisible;
             base.Initialize();
         }
