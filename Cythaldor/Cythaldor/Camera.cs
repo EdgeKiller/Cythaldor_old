@@ -34,7 +34,6 @@ namespace Cythaldor
             {
                 position.X += Settings.Camera.Speed;
             }
-
             if (position.X < 0)
                 position.X = 0;
             if (position.Y < 0)

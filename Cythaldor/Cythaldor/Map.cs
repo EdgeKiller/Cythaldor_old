@@ -18,8 +18,13 @@ namespace Cythaldor
 
         public Map()
         {
-           TilesGround = new int[Settings.Map.Width,Settings.Map.Height];
-           RandomMap();
+            TilesGround = new int[Settings.Map.Width,Settings.Map.Height];
+            //RandomMap();
+            TilesGround[1, 0] = 1;
+            TilesGround[2, 0] = 2;
+            TilesGround[3, 0] = 3;
+            TilesGround[4, 0] = 4;
+            TilesGround[5, 0] = 5;
         }
 
 
@@ -30,7 +35,7 @@ namespace Cythaldor
             {
                 for (int x = 0; x < TilesGround.GetLength(0); x++)
                 {
-                    TilesGround[x, y] = rand.Next(0, 3);
+                    TilesGround[x, y] = rand.Next(0, 6);
                 }
             }
         }
@@ -46,14 +51,17 @@ namespace Cythaldor
                         (y * Settings.Tile.Height - Camera.position.Y) < Settings.Window.Height)
                     {
                         spriteBatch.Draw(Resources.tileset, new Vector2(x * Settings.Tile.Width - Camera.position.X, 
-                            y * Settings.Tile.Height - Camera.position.Y),
-                        new Rectangle(TilesGround[y, x] * Settings.Tile.Width, 0, Settings.Tile.Width, Settings.Tile.Height), Color.White);
+                            y * Settings.Tile.Height - Camera.position.Y), GetSourceRectangle(TilesGround[x, y]), Color.White);
                     }
-
-                    
                 }
             }
-                
+        }
+
+        static public Rectangle GetSourceRectangle(int tileIndex)
+        {
+            int tileY = tileIndex / (Resources.tileset.Width / Settings.Tile.Width);
+            int tileX = tileIndex % (Resources.tileset.Width / Settings.Tile.Width);
+            return new Rectangle(tileX * Settings.Tile.Width, tileY * Settings.Tile.Height, Settings.Tile.Width, Settings.Tile.Height);
         }
 
     }
