@@ -11,17 +11,16 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Cythaldor
 {
-    class TileGround : Tile
+    public static class Resources
     {
+        public static Texture2D tileset;
 
-        public TileGround(int id) : base(id)
+        public static void LoadContent(ContentManager content)
         {
-
-            
-
+            tileset = content.Load<Texture2D>(@"Textures\tileset");
         }
 
-        
+
 
 
     }

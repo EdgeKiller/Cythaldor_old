@@ -10,3 +10,4 @@ C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldo
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.exe
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.pdb
+C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\tileset.xnb

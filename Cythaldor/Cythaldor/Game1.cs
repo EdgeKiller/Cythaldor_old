@@ -38,6 +38,7 @@ namespace Cythaldor
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            Resources.LoadContent(Content);
         }
 
         protected override void UnloadContent()
