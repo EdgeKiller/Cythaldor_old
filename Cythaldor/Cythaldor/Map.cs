@@ -20,9 +20,12 @@ namespace Cythaldor
         public Map()
         {
             TilesGround = new int[Settings.Map.Width,Settings.Map.Height];
-            RandomMap();
-            ObjectsTile.Add(new Tree(0, 32, 32, new Vector2(4,4)));
-            
+            //RandomMap();
+            ObjectsTile.Add(new Tree(2, new Vector2(4,4)));
+            ObjectsTile.Add(new Tree(2, new Vector2(5,4)));
+            ObjectsTile.Add(new Tree(2, new Vector2(6, 4)));
+            ObjectsTile.Add(new Tree(2, new Vector2(4, 5)));
+            ObjectsTile.Add(new Tree(2, new Vector2(5, 5)));
         }
 
         public void Draw(SpriteBatch spriteBatch)

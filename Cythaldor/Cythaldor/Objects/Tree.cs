@@ -15,7 +15,7 @@ namespace Cythaldor
     {
         
 
-        public Tree(int id, int width, int height, Vector2 position) : base(id, width, height, position)
+        public Tree(int id, Vector2 position) : base(id, position)
         {
 
         }
