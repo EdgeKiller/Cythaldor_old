@@ -7,10 +7,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\Projects\Cythaldor\Cythaldor\CythaldorContent\</RootDirectory>
-      <LoggerRootDirectory>E:\Projects\Cythaldor\Cythaldor\Cythaldor\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\Projects\Cythaldor\Cythaldor\CythaldorContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\Projects\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\CythaldorContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\CythaldorContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

@@ -16,6 +16,8 @@ namespace Cythaldor
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        GameMain main;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -24,6 +26,7 @@ namespace Cythaldor
             graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             graphics.IsFullScreen = true;
             graphics.ApplyChanges();
+            main = new GameMain();
         }
 
         protected override void Initialize()
@@ -48,12 +51,16 @@ namespace Cythaldor
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
+            main.Update(Keyboard.GetState(), Mouse.GetState(), gameTime);
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            main.Draw(spriteBatch);
 
             base.Draw(gameTime);
         }
