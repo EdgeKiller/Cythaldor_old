@@ -15,4 +15,4 @@ Cythaldor
 
 **Can I help you ?**
 
-- Sure, contact me to this mail adress : edgekillerfr@hotmail.fr
+- Sure, contact me to this mail adress : edgekillerfr@live.fr
