@@ -1,4 +1,4 @@
 Cythaldor
 =========
 
-C# / XNA Open Source Game mod
+**What is Cythaldor ?**
