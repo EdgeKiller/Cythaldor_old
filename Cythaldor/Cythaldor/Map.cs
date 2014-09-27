@@ -14,17 +14,15 @@ namespace Cythaldor
     public class Map
     {
         public static int[,] TilesGround;
-        
+        public static List<Object> ObjectsTile = new List<Object>();
+
 
         public Map()
         {
             TilesGround = new int[Settings.Map.Width,Settings.Map.Height];
-            //RandomMap();
-            TilesGround[1, 0] = 1;
-            TilesGround[2, 0] = 2;
-            TilesGround[3, 0] = 3;
-            TilesGround[4, 0] = 4;
-            TilesGround[5, 0] = 5;
+            RandomMap();
+            ObjectsTile.Add(new Tree(0, 32, 32, new Vector2(4,4)));
+            
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -41,9 +39,14 @@ namespace Cythaldor
                     }
                 }
             }
+
+            foreach(Object _object in ObjectsTile)
+            {
+                _object.Draw(spriteBatch);
+            }
         }
 
-        static public Rectangle GetSourceRectangle(int tileIndex)
+        public Rectangle GetSourceRectangle(int tileIndex)
         {
             int tileY = tileIndex / (Resources.tileset.Width / Settings.Tile.Width);
             int tileX = tileIndex % (Resources.tileset.Width / Settings.Tile.Width);

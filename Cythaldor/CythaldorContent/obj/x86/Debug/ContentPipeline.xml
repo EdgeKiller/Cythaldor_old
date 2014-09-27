@@ -37,6 +37,15 @@
       <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\cursor.xnb</Output>
       <Time>2014-09-27T22:58:25.3781407+02:00</Time>
     </Item>
+    <Item>
+      <Source>Textures\object.png</Source>
+      <Name>Textures\object</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\object.xnb</Output>
+      <Time>2014-09-28T00:02:54.0384154+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

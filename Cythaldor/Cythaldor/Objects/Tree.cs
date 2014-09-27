@@ -11,14 +11,17 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Cythaldor
 {
-    abstract class Tile
+    class Tree : Object
     {
-        public int id;
+        
 
-        public Tile(int id)
+        public Tree(int id, int width, int height, Vector2 position) : base(id, width, height, position)
         {
-            this.id = id;
+
         }
+
+        
+
 
     }
 }
