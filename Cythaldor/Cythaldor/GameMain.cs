@@ -16,18 +16,19 @@ namespace Cythaldor
 
         public GameMain()
         {
-            
+           
+ 
         }
-
-
 
         public void Update(KeyboardState keyboard, MouseState mouse, GameTime gameTime)
         {
+
 
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
+
 
         }
 

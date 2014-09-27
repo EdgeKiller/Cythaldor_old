@@ -38,7 +38,6 @@ namespace Cythaldor
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
         }
 
         protected override void UnloadContent()
@@ -48,20 +47,14 @@ namespace Cythaldor
 
         protected override void Update(GameTime gameTime)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-                this.Exit();
-
             main.Update(Keyboard.GetState(), Mouse.GetState(), gameTime);
-
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
             main.Draw(spriteBatch);
-
             base.Draw(gameTime);
         }
     }
