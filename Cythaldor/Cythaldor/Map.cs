@@ -13,35 +13,27 @@ namespace Cythaldor
 {
     public class Map
     {
-        static public int[,] TilesGround = 
-        {
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
-        };
+        static public int[,] TilesGround;
+
 
         public Map()
         {
-           
+           TilesGround = new int[Settings.Map.Width,Settings.Map.Height];
+           RandomMap();
         }
 
+
+        public void RandomMap()
+        {
+            Random rand = new Random();
+            for (int y = 0; y < TilesGround.GetLength(1); y++)
+            {
+                for (int x = 0; x < TilesGround.GetLength(0); x++)
+                {
+                    TilesGround[x, y] = rand.Next(0, 3);
+                }
+            }
+        }
 
 
         public void Draw(SpriteBatch spriteBatch)
@@ -50,8 +42,15 @@ namespace Cythaldor
             {
                 for (int x = 0; x < TilesGround.GetLength(0); x++)
                 {
-                    spriteBatch.Draw(Resources.tileset, new Vector2(x * Settings.TileWidth, y * Settings.TileHeight), 
-                        new Rectangle(TilesGround[y,x] * Settings.TileWidth, 0, Settings.TileWidth, Settings.TileHeight), Color.White);
+                    if ((x * Settings.Tile.Width - Camera.position.X) < Settings.Window.Width &&
+                        (y * Settings.Tile.Height - Camera.position.Y) < Settings.Window.Height)
+                    {
+                        spriteBatch.Draw(Resources.tileset, new Vector2(x * Settings.Tile.Width - Camera.position.X, 
+                            y * Settings.Tile.Height - Camera.position.Y),
+                        new Rectangle(TilesGround[y, x] * Settings.Tile.Width, 0, Settings.Tile.Width, Settings.Tile.Height), Color.White);
+                    }
+
+                    
                 }
             }
                 

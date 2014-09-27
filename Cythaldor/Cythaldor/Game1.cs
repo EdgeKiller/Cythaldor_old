@@ -22,18 +22,18 @@ namespace Cythaldor
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = Settings.WindowHeight;
-            graphics.PreferredBackBufferWidth = Settings.WindowWidth;
-            graphics.IsFullScreen = Settings.FullScreen;
+            graphics.PreferredBackBufferHeight = Settings.Window.Height;
+            graphics.PreferredBackBufferWidth = Settings.Window.Width;
+            graphics.IsFullScreen = Settings.Window.FullScreen;
             graphics.ApplyChanges();
             main = new GameMain();
         }
 
         protected override void Initialize()
         {
-            Window.Title = Settings.GameName + " - " + Settings.GameVersion + " - " +
-                Settings.GameCreator;
-            IsMouseVisible = Settings.MouseVisible;
+            Window.Title = Settings.Window.GameName + " - " + Settings.Window.GameVersion + " - " +
+                Settings.Window.GameCreator;
+            IsMouseVisible = Settings.Window.MouseVisible;
             base.Initialize();
         }
 

@@ -24,7 +24,7 @@ namespace Cythaldor
 
         public void Update(KeyboardState keyboard, MouseState mouse, GameTime gameTime)
         {
-
+            Camera.Update(keyboard);
 
         }
 
