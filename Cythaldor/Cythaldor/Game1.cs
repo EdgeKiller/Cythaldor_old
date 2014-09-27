@@ -50,7 +50,7 @@ namespace Cythaldor
 
         protected override void Update(GameTime gameTime)
         {
-            main.Update(Keyboard.GetState(), Mouse.GetState(), gameTime);
+            main.Update(Keyboard.GetState(), Mouse.GetState(), gameTime, graphics);
             base.Update(gameTime);
         }
 

@@ -10,3 +10,5 @@ C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Microsof
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.exe
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.pdb
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\tileset.xnb
+C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\select.xnb

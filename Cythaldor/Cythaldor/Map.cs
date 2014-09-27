@@ -13,8 +13,8 @@ namespace Cythaldor
 {
     public class Map
     {
-        static public int[,] TilesGround;
-
+        public static int[,] TilesGround;
+        
 
         public Map()
         {
@@ -26,20 +26,6 @@ namespace Cythaldor
             TilesGround[4, 0] = 4;
             TilesGround[5, 0] = 5;
         }
-
-
-        public void RandomMap()
-        {
-            Random rand = new Random();
-            for (int y = 0; y < TilesGround.GetLength(1); y++)
-            {
-                for (int x = 0; x < TilesGround.GetLength(0); x++)
-                {
-                    TilesGround[x, y] = rand.Next(0, 6);
-                }
-            }
-        }
-
 
         public void Draw(SpriteBatch spriteBatch)
         {
@@ -62,6 +48,18 @@ namespace Cythaldor
             int tileY = tileIndex / (Resources.tileset.Width / Settings.Tile.Width);
             int tileX = tileIndex % (Resources.tileset.Width / Settings.Tile.Width);
             return new Rectangle(tileX * Settings.Tile.Width, tileY * Settings.Tile.Height, Settings.Tile.Width, Settings.Tile.Height);
+        }
+
+        public void RandomMap()
+        {
+            Random rand = new Random();
+            for (int y = 0; y < TilesGround.GetLength(1); y++)
+            {
+                for (int x = 0; x < TilesGround.GetLength(0); x++)
+                {
+                    TilesGround[x, y] = rand.Next(0, 6);
+                }
+            }
         }
 
     }
