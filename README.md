@@ -9,3 +9,10 @@ Cythaldor
 
 - It's coded in C# with the XNA framework on Visual Studio 2013 Ultimate.
 
+**The game is moddable ?**
+
+- No for the moment, but this is planned.
+
+**Can I help you ?**
+
+- Sure, contact me to this mail adress : edgekillerfr@hotmail.fr
