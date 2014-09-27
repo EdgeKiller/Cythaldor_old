@@ -57,7 +57,13 @@ namespace Cythaldor
         {
             public static Dictionary<string, Keys> KeysDic = new Dictionary<string, Keys>()
             {
-                {"KEY_UP", Keys.Up}, {"KEY_DOWN", Keys.Down}, {"KEY_LEFT", Keys.Left}, {"KEY_RIGHT", Keys.Right}
+                {"KEY_UP", Keys.Up}, {"KEY_DOWN", Keys.Down}, {"KEY_LEFT", Keys.Left}, {"KEY_RIGHT", Keys.Right},
+                {"KEY_A", Keys.A}, {"KEY_B", Keys.B}, {"KEY_C", Keys.C}, {"KEY_D", Keys.D}, {"KEY_E", Keys.E},
+                {"KEY_F", Keys.F}, {"KEY_G", Keys.G}, {"KEY_H", Keys.H}, {"KEY_I", Keys.I}, {"KEY_J", Keys.J}, 
+                {"KEY_K", Keys.K}, {"KEY_L", Keys.L}, {"KEY_M", Keys.M}, {"KEY_N", Keys.N}, {"KEY_O", Keys.O}, 
+                {"KEY_P", Keys.P}, {"KEY_Q", Keys.Q}, {"KEY_R", Keys.R}, {"KEY_S", Keys.S}, {"KEY_T", Keys.T}, 
+                {"KEY_U", Keys.U}, {"KEY_V", Keys.V}, {"KEY_W", Keys.W}, {"KEY_X", Keys.X}, {"KEY_Y", Keys.Y}, 
+                {"KEY_Z", Keys.Z}
             };
             
             //CAMERA KEYS
