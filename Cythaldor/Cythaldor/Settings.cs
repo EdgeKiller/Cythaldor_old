@@ -41,7 +41,7 @@ namespace Cythaldor
         //WINDOWS GAME
         public static class Window
         {
-            public static bool MouseVisible = true;
+            public static bool MouseVisible = false;
             public static bool FullScreen = false;
             //public static int Height = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
             //public static int Width = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;

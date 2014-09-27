@@ -26,7 +26,16 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2014-09-27T21:32:26.5180708+02:00</Time>
+      <Time>2014-09-27T22:51:44.6282191+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\cursor.png</Source>
+      <Name>Textures\cursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\cursor.xnb</Output>
+      <Time>2014-09-27T22:58:25.3781407+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

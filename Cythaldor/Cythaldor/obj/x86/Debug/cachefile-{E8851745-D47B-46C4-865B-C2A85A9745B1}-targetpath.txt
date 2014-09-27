@@ -1,3 +1,4 @@
 Content\Textures\tileset.xnb
 Content\Textures\select.xnb
 Content\SpriteFont1.xnb
+Content\Textures\cursor.xnb
