@@ -1,0 +1,6 @@
+E:\Projects\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Cythaldor.exe
+E:\Projects\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Cythaldor.pdb
+E:\Projects\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.csprojResolveAssemblyReference.cache
+E:\Projects\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Projects\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.exe
+E:\Projects\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.pdb
