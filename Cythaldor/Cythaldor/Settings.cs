@@ -21,14 +21,14 @@ namespace Cythaldor
         //MAP
         public static class Map
         {
-            public static int Height = 30;
-            public static int Width = 50;
+            public static int Height = 100;
+            public static int Width = 100;
         }
         
         //CAMERA
         public static class Camera
         {
-            public static int Speed = 4;
+            public static int Speed = 8;
         }
 
         //TILE
@@ -42,7 +42,7 @@ namespace Cythaldor
         public static class Window
         {
             public static bool MouseVisible = false;
-            public static bool FullScreen = false;
+            public static bool FullScreen = true;
             public static int Height = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
             public static int Width = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             //public static int Height = 600;

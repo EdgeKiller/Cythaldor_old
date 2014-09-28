@@ -41,7 +41,7 @@ namespace Cythaldor
                 position.Y += Settings.Camera.Speed;
 
             
-            if((int)Math.Floor((position.X + Settings.Window.Width) / Settings.Tile.Width) > Map.TilesGround.GetLength(0))
+            if((int)Math.Floor((position.X + Settings.Window.Width) / Settings.Tile.Width) >= Map.TilesGround.GetLength(0))
             {
                 if(Settings.Window.Width <= Map.TilesGround.GetLength(0) * Settings.Tile.Width)
                     position.X -= Settings.Camera.Speed;
@@ -50,7 +50,7 @@ namespace Cythaldor
                     
             }
             
-            if ((int)Math.Floor((position.Y + Settings.Window.Height) / Settings.Tile.Height) > Map.TilesGround.GetLength(1))
+            if ((int)Math.Floor((position.Y + Settings.Window.Height) / Settings.Tile.Height) >= Map.TilesGround.GetLength(1))
             {
                 if (Settings.Window.Height <= Map.TilesGround.GetLength(1) * Settings.Tile.Height)
                     position.Y -= Settings.Camera.Speed;
