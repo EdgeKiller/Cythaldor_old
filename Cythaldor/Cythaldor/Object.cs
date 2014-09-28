@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Cythaldor
 {
-    public abstract class Object
+    public class Object
     {
         public int id;
         public Vector2 position;

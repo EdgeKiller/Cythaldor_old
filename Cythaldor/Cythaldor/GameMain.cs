@@ -43,6 +43,10 @@ namespace Cythaldor
             {
                 spriteBatch.DrawString(Resources.font1, "ID : " + Map.TilesGround[(int)Cursor.OverTileX, (int)Cursor.OverTileY].ToString(), new Vector2(0, 30), Color.White);
             }
+            if (Cursor.OverObject != null)
+            {
+                spriteBatch.DrawString(Resources.font1, "OBJ ID : " + Cursor.OverObject.id, new Vector2(0, 45), Color.White);
+            }
             spriteBatch.End();
 
         }

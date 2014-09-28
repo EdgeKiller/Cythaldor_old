@@ -20,15 +20,6 @@
       <Time>2014-09-27T22:34:47.9610691+02:00</Time>
     </Item>
     <Item>
-      <Source>SpriteFont1.spritefont</Source>
-      <Name>SpriteFont1</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2014-09-27T22:51:44.6282191+02:00</Time>
-    </Item>
-    <Item>
       <Source>Textures\cursor.png</Source>
       <Name>Textures\cursor</Name>
       <Importer>TextureImporter</Importer>
@@ -45,6 +36,15 @@
       <Options>None</Options>
       <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\object.xnb</Output>
       <Time>2014-09-28T00:24:13.947622+02:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2014-09-27T22:51:44.6282191+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

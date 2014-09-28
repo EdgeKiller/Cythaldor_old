@@ -17,6 +17,8 @@ namespace Cythaldor
 
         public static int? OverTileX, OverTileY;
         public static MouseState _mouse;
+        public static Rectangle hitbox;
+        public static Object OverObject;
 
         public static void Update(MouseState mouse, GraphicsDeviceManager graphics)
         {
@@ -25,11 +27,25 @@ namespace Cythaldor
             {
                 OverTileY = (int)Math.Floor(((float)mouse.Y + Camera.position.Y) / Settings.Tile.Height);
                 OverTileX = (int)Math.Floor(((float)mouse.X + Camera.position.X) / Settings.Tile.Width);
+                hitbox = new Rectangle((int)OverTileX * Settings.Tile.Width, (int)OverTileY * Settings.Tile.Height, Settings.Tile.Width, Settings.Tile.Height);
             }
             else
             {
                 OverTileY = null;
                 OverTileX = null;
+            }
+
+            foreach(Object _object in Map.ObjectsTile)
+            {
+                Rectangle objectRec = new Rectangle((int)_object.position.X * Settings.Tile.Width, (int)_object.position.Y * Settings.Tile.Height,
+                    Settings.Tile.Width, Settings.Tile.Height);
+                if (hitbox.Intersects(objectRec))
+                {
+                    OverObject = _object;
+                    break;
+                }
+                else
+                    OverObject = null;
             }
         }
 
