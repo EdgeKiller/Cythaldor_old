@@ -28,32 +28,30 @@ namespace Cythaldor
                 OverTileY = (int)Math.Floor(((float)mouse.Y + Camera.position.Y) / Settings.Tile.Height);
                 OverTileX = (int)Math.Floor(((float)mouse.X + Camera.position.X) / Settings.Tile.Width);
                 hitbox = new Rectangle((int)OverTileX * Settings.Tile.Width, (int)OverTileY * Settings.Tile.Height, Settings.Tile.Width, Settings.Tile.Height);
+                OverObject = Map.TilesObject[(int)OverTileX, (int)OverTileY];
             }
             else
             {
                 OverTileY = null;
                 OverTileX = null;
+                OverObject = null;
             }
-
-            /*
-            foreach(Object _object in Map.ObjectsTile)
-            {
-                Rectangle objectRec = new Rectangle((int)_object.position.X * Settings.Tile.Width, (int)_object.position.Y * Settings.Tile.Height,
-                    Settings.Tile.Width, Settings.Tile.Height);
-                if (hitbox.Intersects(objectRec))
-                {
-                    OverObject = _object;
-                    break;
-                }
-                else
-                    OverObject = null;
-            }*/
-
-            /*
+            
             if(mouse.RightButton == ButtonState.Pressed)
             {
-                Map.ObjectsTile.Add(new Object(2, new Vector2((int)OverTileX, (int)OverTileY)));
-            }*/
+                Map.TilesObject[(int)OverTileX, (int)OverTileY] = new Object(1, 50);
+                
+            }
+
+            if(mouse.LeftButton == ButtonState.Pressed)
+            {
+                Map.TilesObject[(int)OverTileX, (int)OverTileY].life -= 1;
+                if (Map.TilesObject[(int)OverTileX, (int)OverTileY].life <= 0 && Map.TilesObject[(int)OverTileX, (int)OverTileY].id != 64)
+                {
+                    Map.TilesObject[(int)OverTileX, (int)OverTileY] = new Object(64, 0);
+                }
+            }
+
         }
 
         public static void Draw(SpriteBatch spriteBatch)

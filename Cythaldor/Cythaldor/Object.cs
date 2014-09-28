@@ -14,10 +14,12 @@ namespace Cythaldor
     public class Object
     {
         public int id;
+        public int life;
 
-        public Object(int id)
+        public Object(int id, int life)
         {
             this.id = id;
+            this.life = life;
         }
 
     }

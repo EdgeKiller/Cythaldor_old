@@ -18,11 +18,11 @@ namespace Cythaldor
 
         public Map()
         {
-            TilesGround = new int[Settings.Map.Width,Settings.Map.Height];
+            TilesGround = new int[Settings.Map.Width, Settings.Map.Height];
             TilesObject = new Object[Settings.Map.Width, Settings.Map.Height];
             InitObjectTile();
             //RandomMap();
-            TilesObject[4, 4] = new Object(1);
+            TilesObject[4, 4] = new Object(1, 50);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -34,10 +34,10 @@ namespace Cythaldor
                     if ((x * Settings.Tile.Width - Camera.position.X) < Settings.Window.Width &&
                         (y * Settings.Tile.Height - Camera.position.Y) < Settings.Window.Height)
                     {
-                        spriteBatch.Draw(Resources.tileset, new Vector2(x * Settings.Tile.Width - Camera.position.X, 
+                        spriteBatch.Draw(Resources.tileset, new Vector2(x * Settings.Tile.Width - Camera.position.X,
                             y * Settings.Tile.Height - Camera.position.Y), GetSourceRectangle(TilesGround[x, y]), Color.White);
 
-                        if(TilesObject[x,y].id != 0)
+                        if (TilesObject[x, y].id != 64)
                         {
                             spriteBatch.Draw(Resources.objects, new Vector2(x * Settings.Tile.Width - Camera.position.X,
                                y * Settings.Tile.Height - Camera.position.Y), GetSourceRectangle(TilesObject[x, y].id), Color.White);
@@ -72,12 +72,12 @@ namespace Cythaldor
             {
                 for (int x = 0; x < TilesObject.GetLength(0); x++)
                 {
-                    TilesObject[x, y] = new Object(0);
+                    TilesObject[x, y] = new Object(64, 0);
                 }
             }
         }
 
-        
+
 
     }
 }
