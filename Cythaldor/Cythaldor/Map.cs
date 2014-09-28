@@ -14,18 +14,15 @@ namespace Cythaldor
     public class Map
     {
         public static int[,] TilesGround;
-        public static List<Object> ObjectsTile = new List<Object>();
-
+        public static Object[,] TilesObject;
 
         public Map()
         {
             TilesGround = new int[Settings.Map.Width,Settings.Map.Height];
+            TilesObject = new Object[Settings.Map.Width, Settings.Map.Height];
+            InitObjectTile();
             //RandomMap();
-            ObjectsTile.Add(new Object(0, new Vector2(4,4)));
-            ObjectsTile.Add(new Object(1, new Vector2(5, 4)));
-            ObjectsTile.Add(new Object(2, new Vector2(6, 4)));
-            ObjectsTile.Add(new Object(0, new Vector2(4, 5)));
-            ObjectsTile.Add(new Object(1, new Vector2(5, 5)));
+            TilesObject[4, 4] = new Object(1);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -39,13 +36,14 @@ namespace Cythaldor
                     {
                         spriteBatch.Draw(Resources.tileset, new Vector2(x * Settings.Tile.Width - Camera.position.X, 
                             y * Settings.Tile.Height - Camera.position.Y), GetSourceRectangle(TilesGround[x, y]), Color.White);
+
+                        if(TilesObject[x,y].id != 0)
+                        {
+                            spriteBatch.Draw(Resources.objects, new Vector2(x * Settings.Tile.Width - Camera.position.X,
+                               y * Settings.Tile.Height - Camera.position.Y), GetSourceRectangle(TilesObject[x, y].id), Color.White);
+                        }
                     }
                 }
-            }
-
-            foreach(Object _object in ObjectsTile)
-            {
-                _object.Draw(spriteBatch);
             }
         }
 
@@ -67,6 +65,19 @@ namespace Cythaldor
                 }
             }
         }
+
+        public void InitObjectTile()
+        {
+            for (int y = 0; y < TilesObject.GetLength(1); y++)
+            {
+                for (int x = 0; x < TilesObject.GetLength(0); x++)
+                {
+                    TilesObject[x, y] = new Object(0);
+                }
+            }
+        }
+
+        
 
     }
 }

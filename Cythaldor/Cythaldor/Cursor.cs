@@ -35,6 +35,7 @@ namespace Cythaldor
                 OverTileX = null;
             }
 
+            /*
             foreach(Object _object in Map.ObjectsTile)
             {
                 Rectangle objectRec = new Rectangle((int)_object.position.X * Settings.Tile.Width, (int)_object.position.Y * Settings.Tile.Height,
@@ -46,7 +47,13 @@ namespace Cythaldor
                 }
                 else
                     OverObject = null;
-            }
+            }*/
+
+            /*
+            if(mouse.RightButton == ButtonState.Pressed)
+            {
+                Map.ObjectsTile.Add(new Object(2, new Vector2((int)OverTileX, (int)OverTileY)));
+            }*/
         }
 
         public static void Draw(SpriteBatch spriteBatch)
