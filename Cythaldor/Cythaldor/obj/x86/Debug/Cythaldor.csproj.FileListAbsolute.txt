@@ -14,4 +14,3 @@ C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\select.xnb
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\cursor.xnb
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\object.xnb
-C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.csprojResolveAssemblyReference.cache

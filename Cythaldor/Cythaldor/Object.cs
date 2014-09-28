@@ -16,10 +16,20 @@ namespace Cythaldor
         public int id;
         public int life;
 
-        public Object(int id, int life)
+        public Object(int id)
         {
             this.id = id;
-            this.life = life;
+            switch(this.id)
+            {
+                case 0: //TREE
+                    this.life = 50;
+                    break;
+                case 1: //ROCK
+                    this.life = 200;
+                    break;
+            };
+                
+            
         }
 
     }

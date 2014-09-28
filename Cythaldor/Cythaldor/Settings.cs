@@ -21,8 +21,8 @@ namespace Cythaldor
         //MAP
         public static class Map
         {
-            public static int Height = 1000;
-            public static int Width = 1000;
+            public static int Height = 30;
+            public static int Width = 50;
         }
         
         //CAMERA
@@ -43,10 +43,10 @@ namespace Cythaldor
         {
             public static bool MouseVisible = false;
             public static bool FullScreen = false;
-            //public static int Height = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-            //public static int Width = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-            public static int Height = 600;
-            public static int Width = 800;
+            public static int Height = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            public static int Width = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            //public static int Height = 600;
+            //public static int Width = 800;
             public static string GameVersion = "inDev 0.0.1";
             public static string GameCreator = "EdgeKiller";
             public static string GameName = "Cythaldor";
