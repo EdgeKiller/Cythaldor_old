@@ -21,8 +21,8 @@ namespace Cythaldor
         //MAP
         public static class Map
         {
-            public static int Height = 500;
-            public static int Width = 500;
+            public static int Height = 1000;
+            public static int Width = 1000;
         }
         
         //CAMERA
@@ -50,6 +50,7 @@ namespace Cythaldor
             public static string GameVersion = "inDev 0.0.1";
             public static string GameCreator = "EdgeKiller";
             public static string GameName = "Cythaldor";
+            public static bool ShowGameInfos = true;
         }
        
         //KEYS FROM CONFIG FILE
@@ -71,7 +72,10 @@ namespace Cythaldor
             public static Keys CameraDown = KeysDic[ReadFromConfig("CAMERA_KEY_DOWN")];
             public static Keys CameraLeft = KeysDic[ReadFromConfig("CAMERA_KEY_LEFT")];
             public static Keys CameraRight = KeysDic[ReadFromConfig("CAMERA_KEY_RIGHT")];
-            
+
+            //GENERATE KEY
+            //public static Keys GenerateMap = KeysDic[ReadFromConfig("GENERATE_KEY")];
+
             
             
         }
@@ -89,7 +93,8 @@ namespace Cythaldor
                     result = line.Split('=')[1];
                 }
             }
-            return result;
+            sr.Close();
+            return result;  
         }
 
 

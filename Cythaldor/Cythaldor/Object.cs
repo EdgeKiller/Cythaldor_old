@@ -25,7 +25,7 @@ namespace Cythaldor
                     this.life = 50;
                     break;
                 case 1: //ROCK
-                    this.life = 200;
+                    this.life = 150;
                     break;
             };
                 

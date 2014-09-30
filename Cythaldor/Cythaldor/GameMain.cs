@@ -15,7 +15,6 @@ namespace Cythaldor
     {
 
         Map map;
-        
 
         public GameMain()
         {
@@ -25,6 +24,7 @@ namespace Cythaldor
 
         public void Update(KeyboardState keyboard, MouseState mouse, GameTime gameTime, GraphicsDeviceManager graphics)
         {
+            
             Camera.Update(keyboard);
             Cursor.Update(mouse, graphics);
         }
@@ -33,19 +33,25 @@ namespace Cythaldor
         {
             spriteBatch.Begin();
             map.Draw(spriteBatch);
-
             Cursor.Draw(spriteBatch);
 
-
-            spriteBatch.DrawString(Resources.font1, "X : " + Cursor.OverTileX, Vector2.Zero, Color.White);
-            spriteBatch.DrawString(Resources.font1, "Y : " + Cursor.OverTileY, new Vector2(0, 15), Color.White);
-            if (Cursor.OverTileX != -1 && Cursor.OverTileY != -1)
+            if (Settings.Window.ShowGameInfos)
             {
-                spriteBatch.DrawString(Resources.font1, "TERRAIN ID : " + Map.TilesGround[(int)Cursor.OverTileX, (int)Cursor.OverTileY].ToString(), new Vector2(0, 30), Color.White);
-            }
-            if (Cursor.OverObject != null && Cursor.OverObject.id != 64)
-            {
-                spriteBatch.DrawString(Resources.font1, "OBJ ID : " + Cursor.OverObject.id + " LIFE : " + Cursor.OverObject.life, new Vector2(0, 45), Color.White);
+                spriteBatch.DrawString(Resources.font1, "TILE X : " + Cursor.OverTileX, Vector2.Zero, Color.White);
+                spriteBatch.DrawString(Resources.font1, "TILE Y : " + Cursor.OverTileY, new Vector2(0, 15), Color.White);
+                if (Cursor.OverTileX != -1 && Cursor.OverTileY != -1)
+                {
+                    spriteBatch.DrawString(Resources.font1, "TERRAIN ID : " + Map.TilesGround[(int)Cursor.OverTileX, (int)Cursor.OverTileY].ToString(), new Vector2(0, 30), Color.White);
+                }
+                if (Cursor.OverObject != null && Cursor.OverObject.id != 64)
+                {
+                    spriteBatch.DrawString(Resources.font1, "OBJ ID : " + Cursor.OverObject.id + " LIFE : " + Cursor.OverObject.life, new Vector2(0, 45), Color.White);
+                }
+                spriteBatch.DrawString(Resources.font1, "MOUSE X : " + Cursor._mouse.X, new Vector2(0, 60), Color.White);
+                spriteBatch.DrawString(Resources.font1, "MOUSE Y : " + Cursor._mouse.Y, new Vector2(0, 75), Color.White);
+                spriteBatch.DrawString(Resources.font1, "CAMERA X : " + Camera.position.X, new Vector2(0, 90), Color.White);
+                spriteBatch.DrawString(Resources.font1, "CAMERA Y : " + Camera.position.Y, new Vector2(0, 105), Color.White);
+                spriteBatch.DrawString(Resources.font1, "SEED : " + Map.seed.ToString(), new Vector2(0, 120), Color.White);
             }
             spriteBatch.End();
 

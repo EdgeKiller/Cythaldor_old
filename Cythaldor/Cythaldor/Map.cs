@@ -15,14 +15,17 @@ namespace Cythaldor
     {
         public static int[,] TilesGround;
         public static Object[,] TilesObject;
+        public static int seed;
+        public static Random rand = new Random();
+
 
         public Map()
         {
+            seed = rand.Next(0, 5000000);
             TilesGround = new int[Settings.Map.Width, Settings.Map.Height];
             TilesObject = new Object[Settings.Map.Width, Settings.Map.Height];
             InitObjectTile();
-            //RandomMap();
-            GenerateMap(500);
+            GenerateMap(seed);
             //TilesObject[4, 4] = new Object(1);
         }
 
@@ -56,16 +59,7 @@ namespace Cythaldor
             return new Rectangle(tileX * Settings.Tile.Width, tileY * Settings.Tile.Height, Settings.Tile.Width, Settings.Tile.Height);
         }
 
-        //CREATE A RANDOM MAP
-        public void RandomMap()
-        {
-            Random rand = new Random();
-            for (int y = 0; y < TilesGround.GetLength(1); y++)
-                for (int x = 0; x < TilesGround.GetLength(0); x++)
-                    TilesGround[x, y] = rand.Next(0, 6);
-        }
-
-
+        //GENERATE MAP WITH PERLIN NOISE'S ALGORITHM
         public void GenerateMap(int seed)
         {
             int _seed;
@@ -90,23 +84,18 @@ namespace Cythaldor
 
                     if (finalNumber <= 30 && finalNumber >= 20) // final number 30 - 20
                     {
-                        TilesGround[x, y] = 5;
+                        TilesGround[x, y] = 6;
                     }
                     else if (finalNumber < 20 && finalNumber > 18) // 19 - 16
                     {
-                        TilesGround[x, y] = 4;
+                        TilesGround[x, y] = 5;
                     }
                     else if (finalNumber <= 13 && finalNumber >= 8) // 15 - 9
                     {
                         TilesObject[x, y] = new Object(0);
                         TilesGround[x, y] = 0;
                     }
-                    else if (finalNumber <= 8 && finalNumber >= 4) // 8 - 4
-                    {
-                        TilesObject[x, y] = new Object(1);
-                        TilesGround[x, y] = 0;
-                    }
-                    else if (finalNumber <= 3 && finalNumber >= 0) // 3 - 0
+                    else if (finalNumber <= 8 && finalNumber >= 0) // 8 - 0
                     {
                         TilesObject[x, y] = new Object(1);
                         TilesGround[x, y] = 0;
@@ -118,10 +107,35 @@ namespace Cythaldor
                     }
                 }
             }
-            //BlendGrass();
+            BlendGrass(153);
         }
 
 
+        public void BlendGrass(int seed)
+        {
+            Random rnd = new Random();
+            rnd = new Random(seed);
+            for (int x = 0; x < Settings.Map.Height; x++)
+            {
+                for (int y = 0; y < Settings.Map.Width; y++)
+                {
+                    int ActuTile = rnd.Next(0, 9);
+                    int finaltile = 1;
+                    if (ActuTile == 0 || ActuTile == 1 || ActuTile == 2 || ActuTile == 3 || ActuTile == 7 || ActuTile == 8)
+                        finaltile = 0;
+                    if (ActuTile == 4 || ActuTile == 5)
+                        finaltile = 1;
+                    if (ActuTile == 6)
+                        finaltile = 1;
+
+                    if (TilesGround[x, y] == 0)
+                    {
+                        TilesGround[x,y] = finaltile;
+                    }
+
+                }
+            }
+        }
 
         //SET ALL OBJECT'S ID TO 64
         public void InitObjectTile()
