@@ -21,8 +21,8 @@ namespace Cythaldor
         //MAP
         public static class Map
         {
-            public static int Height = 100;
-            public static int Width = 100;
+            public static int Height = 500;
+            public static int Width = 500;
         }
         
         //CAMERA

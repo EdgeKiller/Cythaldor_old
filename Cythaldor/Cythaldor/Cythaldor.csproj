@@ -76,6 +76,7 @@
     <Compile Include="Cursor.cs" />
     <Compile Include="GameMain.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="PerlinSimplexNoise.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
