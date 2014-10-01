@@ -31,19 +31,19 @@ namespace Cythaldor
                 OverTileY = (int)Math.Floor(((float)mouse.Y + Camera.position.Y) / Settings.Tile.Height);
                 OverTileX = (int)Math.Floor(((float)mouse.X + Camera.position.X) / Settings.Tile.Width);
                 hitbox = new Rectangle((int)OverTileX * Settings.Tile.Width, (int)OverTileY * Settings.Tile.Height, Settings.Tile.Width, Settings.Tile.Height);
-                OverObject = Map.TilesObject[(int)OverTileX, (int)OverTileY];
+                OverObject = Map.TableObject[(int)OverTileX, (int)OverTileY];
 
                 if (mouse.RightButton == ButtonState.Pressed)
                 {
-                    Map.TilesObject[(int)OverTileX, (int)OverTileY] = new Object(1);
+                    Map.TableObject[(int)OverTileX, (int)OverTileY] = new Object(1);
                 }
 
                 if (mouse.LeftButton == ButtonState.Pressed)
                 {
-                    Map.TilesObject[(int)OverTileX, (int)OverTileY].life -= 1;
-                    if (Map.TilesObject[(int)OverTileX, (int)OverTileY].life <= 0 && Map.TilesObject[(int)OverTileX, (int)OverTileY].id != 64)
+                    Map.TableObject[(int)OverTileX, (int)OverTileY].life -= 1;
+                    if (Map.TableObject[(int)OverTileX, (int)OverTileY].life <= 0 && Map.TableObject[(int)OverTileX, (int)OverTileY].id != 64)
                     {
-                        Map.TilesObject[(int)OverTileX, (int)OverTileY] = new Object(64);
+                        Map.TableObject[(int)OverTileX, (int)OverTileY] = new Object(64);
                     }
                 }
 
@@ -68,7 +68,7 @@ namespace Cythaldor
                     Color.White);
                 
             }
-            spriteBatch.Draw(Resources.cursor, new Vector2(_mouse.X, _mouse.Y), Color.White);
+            spriteBatch.Draw(Resources.cursor, new Vector2(_mouse.X, _mouse.Y), Settings.Cursor.color);
         }
     }
 }

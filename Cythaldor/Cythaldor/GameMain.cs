@@ -24,9 +24,9 @@ namespace Cythaldor
 
         public void Update(KeyboardState keyboard, MouseState mouse, GameTime gameTime, GraphicsDeviceManager graphics)
         {
-            
-            Camera.Update(keyboard);
+            Camera.Update(keyboard, gameTime);
             Cursor.Update(mouse, graphics);
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -41,7 +41,7 @@ namespace Cythaldor
                 spriteBatch.DrawString(Resources.font1, "TILE Y : " + Cursor.OverTileY, new Vector2(0, 15), Color.White);
                 if (Cursor.OverTileX != -1 && Cursor.OverTileY != -1)
                 {
-                    spriteBatch.DrawString(Resources.font1, "TERRAIN ID : " + Map.TilesGround[(int)Cursor.OverTileX, (int)Cursor.OverTileY].ToString(), new Vector2(0, 30), Color.White);
+                    spriteBatch.DrawString(Resources.font1, "TERRAIN ID : " + Map.TableGround[(int)Cursor.OverTileX, (int)Cursor.OverTileY].ToString(), new Vector2(0, 30), Color.White);
                 }
                 if (Cursor.OverObject != null && Cursor.OverObject.id != 64)
                 {
@@ -53,6 +53,7 @@ namespace Cythaldor
                 spriteBatch.DrawString(Resources.font1, "CAMERA Y : " + Camera.position.Y, new Vector2(0, 105), Color.White);
                 spriteBatch.DrawString(Resources.font1, "SEED : " + Map.seed.ToString(), new Vector2(0, 120), Color.White);
             }
+
             spriteBatch.End();
 
         }

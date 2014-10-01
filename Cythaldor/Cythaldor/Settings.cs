@@ -15,20 +15,17 @@ namespace Cythaldor
     public static class Settings
     {
         
-
-
-
         //MAP
         public static class Map
         {
-            public static int Height = 1000;
-            public static int Width = 1000;
+            public static int Height = 100;
+            public static int Width = 100;
         }
         
         //CAMERA
         public static class Camera
         {
-            public static int Speed = 8;
+            public static int Speed = 5;
         }
 
         //TILE
@@ -53,6 +50,13 @@ namespace Cythaldor
             public static bool ShowGameInfos = true;
         }
        
+        //CURSOR
+        public static class Cursor
+        {
+            public static Color color = Color.Red;
+
+        }
+
         //KEYS FROM CONFIG FILE
         public static class Key
         {
@@ -68,13 +72,15 @@ namespace Cythaldor
             };
             
             //CAMERA KEYS
+            
             public static Keys CameraUp = KeysDic[ReadFromConfig("CAMERA_KEY_UP")];
             public static Keys CameraDown = KeysDic[ReadFromConfig("CAMERA_KEY_DOWN")];
             public static Keys CameraLeft = KeysDic[ReadFromConfig("CAMERA_KEY_LEFT")];
             public static Keys CameraRight = KeysDic[ReadFromConfig("CAMERA_KEY_RIGHT")];
+            
 
             //GENERATE KEY
-            //public static Keys GenerateMap = KeysDic[ReadFromConfig("GENERATE_KEY")];
+            public static Keys GenerateMap = KeysDic[ReadFromConfig("GENERATE_KEY")];
 
             
             

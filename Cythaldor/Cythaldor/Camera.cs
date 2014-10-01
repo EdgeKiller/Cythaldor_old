@@ -16,44 +16,46 @@ namespace Cythaldor
 
         public static Vector2 position = Vector2.Zero;
 
-        public static void Update(KeyboardState keyboard)
+        public static void Update(KeyboardState keyboard, GameTime gameTime)
         {
-            if(keyboard.IsKeyDown(Settings.Key.CameraUp))
+            int speed = Settings.Camera.Speed + (int)gameTime.ElapsedGameTime.TotalMilliseconds / 8;
+            if (keyboard.IsKeyDown(Settings.Key.CameraUp))
             {
-                position.Y -= Settings.Camera.Speed;
+                position.Y -= speed;
             }
             if (keyboard.IsKeyDown(Settings.Key.CameraDown))
             {
-                position.Y += Settings.Camera.Speed;
+                position.Y += speed;
             }
             if (keyboard.IsKeyDown(Settings.Key.CameraLeft))
             {
-                position.X -= Settings.Camera.Speed;
+                position.X -= speed;
             }
             if (keyboard.IsKeyDown(Settings.Key.CameraRight))
             {
-                position.X += Settings.Camera.Speed;
+                position.X += speed;
             }
 
             if (position.X < 0)
-                position.X += Settings.Camera.Speed;
+                position.X += speed;
             if (position.Y < 0)
-                position.Y += Settings.Camera.Speed;
+                position.Y += speed;
+
 
             
-            if((int)Math.Floor((position.X + Settings.Window.Width) / Settings.Tile.Width) >= Map.TilesGround.GetLength(0))
+            if((int)Math.Floor((position.X + Settings.Window.Width) / Settings.Tile.Width) >= Map.TableGround.GetLength(0))
             {
-                if(Settings.Window.Width <= Map.TilesGround.GetLength(0) * Settings.Tile.Width)
-                    position.X -= Settings.Camera.Speed;
+                if(Settings.Window.Width <= Map.TableGround.GetLength(0) * Settings.Tile.Width)
+                    position.X -= speed;
                 else
                     position.X = 0;
                     
             }
             
-            if ((int)Math.Floor((position.Y + Settings.Window.Height) / Settings.Tile.Height) >= Map.TilesGround.GetLength(1))
+            if ((int)Math.Floor((position.Y + Settings.Window.Height) / Settings.Tile.Height) >= Map.TableGround.GetLength(1))
             {
-                if (Settings.Window.Height <= Map.TilesGround.GetLength(1) * Settings.Tile.Height)
-                    position.Y -= Settings.Camera.Speed;
+                if (Settings.Window.Height <= Map.TableGround.GetLength(1) * Settings.Tile.Height)
+                    position.Y -= speed;
                 else
                     position.Y = 0;
             }
