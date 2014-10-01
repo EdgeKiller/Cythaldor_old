@@ -15,24 +15,28 @@ namespace Cythaldor
     {
 
         Map map;
+        GUI gui;
 
         public GameMain()
         {
             map = new Map();
- 
+            gui = new GUI();
         }
 
         public void Update(KeyboardState keyboard, MouseState mouse, GameTime gameTime, GraphicsDeviceManager graphics)
         {
             Camera.Update(keyboard, gameTime);
             Cursor.Update(mouse, graphics);
-
+            gui.Update(mouse, keyboard);
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone);
             map.Draw(spriteBatch);
+            gui.Draw(spriteBatch);
+
+
             Cursor.Draw(spriteBatch);
 
             if (Settings.Window.ShowGameInfos)

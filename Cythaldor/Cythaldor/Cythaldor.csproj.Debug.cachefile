@@ -1,5 +1,8 @@
 Content\Textures\tileset.xnb
 Content\Textures\select.xnb
-Content\Textures\cursor.xnb
 Content\Textures\object.xnb
 Content\SpriteFont1.xnb
+Content\Textures\GUI\cursor.xnb
+Content\Textures\GUI\button_wood.xnb
+Content\Textures\GUI\button_rock.xnb
+Content\Textures\GUI\gui.xnb

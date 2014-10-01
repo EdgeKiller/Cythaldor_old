@@ -13,17 +13,31 @@ namespace Cythaldor
 {
     public static class Resources
     {
-        public static Texture2D tileset, select, cursor;
-        public static Texture2D objects;
+        //TILESETS
+        public static Texture2D tileset, select, objects;
+
+        //FONTS
         public static SpriteFont font1;
+
+        //GUI
+        public static Texture2D cursor, button_Wood, button_Rock, GUI;
 
         public static void LoadContent(ContentManager content)
         {
+            //TILESETS
             tileset = content.Load<Texture2D>(@"Textures\tileset");
             select = content.Load<Texture2D>(@"Textures\select");
-            font1 = content.Load<SpriteFont>(@"SpriteFont1");
-            cursor = content.Load<Texture2D>(@"Textures\cursor");
             objects = content.Load<Texture2D>(@"Textures\object");
+
+            //FONTS
+            font1 = content.Load<SpriteFont>(@"SpriteFont1");
+
+            //GUI
+            cursor = content.Load<Texture2D>(@"Textures\GUI\cursor");
+            button_Wood = content.Load<Texture2D>(@"Textures\GUI\button_wood");
+            button_Rock = content.Load<Texture2D>(@"Textures\GUI\button_rock");
+            GUI = content.Load<Texture2D>(@"Textures\GUI\gui");
+
         }
 
 

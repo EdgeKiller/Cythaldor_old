@@ -12,6 +12,9 @@ C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldo
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\tileset.xnb
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\SpriteFont1.xnb
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\select.xnb
-C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\cursor.xnb
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\object.xnb
 C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\obj\x86\Debug\Cythaldor.csprojResolveAssemblyReference.cache
+C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\GUI\cursor.xnb
+C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\GUI\button_wood.xnb
+C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\GUI\button_rock.xnb
+C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\GUI\gui.xnb

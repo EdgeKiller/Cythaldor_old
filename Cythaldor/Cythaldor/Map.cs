@@ -53,7 +53,7 @@ namespace Cythaldor
         //GET THE SOURCE RECTANGLE FROM THE TILESET TEXTURE
         public Rectangle GetSourceRectangle(int tileIndex)
         {
-            int tileY = tileIndex / (Resources.tileset.Width / Settings.Tile.Width);
+            int tileY = tileIndex / (Resources.tileset.Height / Settings.Tile.Height);
             int tileX = tileIndex % (Resources.tileset.Width / Settings.Tile.Width);
             return new Rectangle(tileX * Settings.Tile.Width, tileY * Settings.Tile.Height, Settings.Tile.Width, Settings.Tile.Height);
         }

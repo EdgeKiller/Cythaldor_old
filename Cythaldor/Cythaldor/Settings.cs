@@ -39,15 +39,16 @@ namespace Cythaldor
         public static class Window
         {
             public static bool MouseVisible = false;
-            public static bool FullScreen = true;
-            public static int Height = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-            public static int Width = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-            //public static int Height = 600;
-            //public static int Width = 800;
+            public static bool FullScreen = false;
+            
+            //public static int Height = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            //public static int Width = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            public static int Height = 1280;
+            public static int Width = 720;
             public static string GameVersion = "inDev 0.0.1";
             public static string GameCreator = "EdgeKiller";
             public static string GameName = "Cythaldor";
-            public static bool ShowGameInfos = true;
+            public static bool ShowGameInfos = false;
         }
        
         //CURSOR

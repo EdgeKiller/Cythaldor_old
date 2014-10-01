@@ -24,3 +24,4 @@ Next Things To Do :
 - Create new textures (buildings/ground/tree)
 - Create the GUI
 - Create the main menu
+- Minimap
