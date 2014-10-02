@@ -47,31 +47,22 @@
       <Time>2014-10-01T14:33:20.6654304+02:00</Time>
     </Item>
     <Item>
-      <Source>Textures\GUI\button_wood.png</Source>
-      <Name>Textures\GUI\button_wood</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\GUI\button_wood.xnb</Output>
-      <Time>2014-10-01T22:26:55.9122176+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\GUI\button_rock.png</Source>
-      <Name>Textures\GUI\button_rock</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\GUI\button_rock.xnb</Output>
-      <Time>2014-10-01T22:27:00.4344763+02:00</Time>
-    </Item>
-    <Item>
       <Source>Textures\GUI\gui.png</Source>
       <Name>Textures\GUI\gui</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\Textures\GUI\gui.xnb</Output>
-      <Time>2014-10-01T22:42:09.5784144+02:00</Time>
+      <Time>2014-10-02T18:54:12.429473+02:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont2.spritefont</Source>
+      <Name>SpriteFont2</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\EdgeKiller\Desktop\Cythaldor\Cythaldor\Cythaldor\bin\x86\Debug\Content\SpriteFont2.xnb</Output>
+      <Time>2014-10-02T22:07:10.4577847+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

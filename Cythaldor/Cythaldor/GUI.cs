@@ -20,19 +20,19 @@ namespace Cythaldor
 
         public GUI()
         {
-            float woodRecWidth = ((Settings.Window.Width * 0.052f) * 2.0f);
-            float woodRecHeight = ((Settings.Window.Height * 0.023f) * 2.0f);
-
-
-
-
-            Rectangle woodRectangle = new Rectangle(15, 15, (int)woodRecWidth, (int)woodRecHeight);
-            //MessageBox.Show((1280 * 0.052).ToString());
-            //Rectangle woodRectangle = new Rectangle(15, 15, 100, 25);
             //WOOD BUTTON
+            float woodRecWidth = (Settings.Window.Width * (100f / 1920f) * 2.0f);
+            float woodRecHeight = (Settings.Window.Height * (25f / 1080f) * 2.0f);
+            Rectangle woodRectangle = new Rectangle(15, 15, (int)woodRecWidth, (int)woodRecHeight);
             buttons.Add(new Button(0, woodRectangle));
 
             //ROCK BUTTON
+            float rockRecWidth = (Settings.Window.Width * (100f / 1920f) * 2.0f);
+            float rockRecHeight = (Settings.Window.Height * (25f / 1080f) * 2.0f);
+            Rectangle rockRectangle = new Rectangle(30 + (int)woodRecWidth,  15, (int)rockRecWidth, (int)rockRecHeight);
+            buttons.Add(new Button(1, rockRectangle));
+
+
         }
 
         public void Update(MouseState mouse, KeyboardState keyboard)
@@ -51,9 +51,9 @@ namespace Cythaldor
         //GET THE SOURCE RECTANGLE FROM THE BUTTON'S TILESET
         public Rectangle GetSourceRectangle(int tileIndex)
         {
-            int tileY = tileIndex / (Resources.GUI.Height / 25);
-            int tileX = tileIndex % (Resources.GUI.Width / 100);
-            return new Rectangle(tileX * 100, tileY * 25, 100, 25);
+            int tileY = tileIndex / (Resources.GUI.Height / 50);
+            int tileX = tileIndex % (Resources.GUI.Width / 200);
+            return new Rectangle(tileX * 200, tileY * 50, 200, 50);
         }
 
 

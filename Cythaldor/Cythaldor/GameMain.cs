@@ -16,11 +16,13 @@ namespace Cythaldor
 
         Map map;
         GUI gui;
+        Player player;
 
         public GameMain()
         {
             map = new Map();
             gui = new GUI();
+            player = new Player();
         }
 
         public void Update(KeyboardState keyboard, MouseState mouse, GameTime gameTime, GraphicsDeviceManager graphics)
@@ -57,6 +59,8 @@ namespace Cythaldor
                 spriteBatch.DrawString(Resources.font1, "CAMERA Y : " + Camera.position.Y, new Vector2(0, 105), Color.White);
                 spriteBatch.DrawString(Resources.font1, "SEED : " + Map.seed.ToString(), new Vector2(0, 120), Color.White);
             }
+
+            spriteBatch.DrawString(Resources.font2, player.woodInventory.ToString(), new Vector2(gui.buttons[0].rectangle.X + 25, gui.buttons[0].rectangle.Y + 3), Color.Black);
 
             spriteBatch.End();
 

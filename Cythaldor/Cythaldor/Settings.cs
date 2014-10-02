@@ -43,8 +43,8 @@ namespace Cythaldor
             
             //public static int Height = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
             //public static int Width = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-            public static int Height = 1280;
-            public static int Width = 720;
+            public static int Height = 720;
+            public static int Width = 1280;
             public static string GameVersion = "inDev 0.0.1";
             public static string GameCreator = "EdgeKiller";
             public static string GameName = "Cythaldor";

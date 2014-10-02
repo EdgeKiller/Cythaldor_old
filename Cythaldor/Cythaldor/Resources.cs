@@ -17,10 +17,10 @@ namespace Cythaldor
         public static Texture2D tileset, select, objects;
 
         //FONTS
-        public static SpriteFont font1;
+        public static SpriteFont font1, font2;
 
         //GUI
-        public static Texture2D cursor, button_Wood, button_Rock, GUI;
+        public static Texture2D cursor, GUI;
 
         public static void LoadContent(ContentManager content)
         {
@@ -31,11 +31,10 @@ namespace Cythaldor
 
             //FONTS
             font1 = content.Load<SpriteFont>(@"SpriteFont1");
+            font2 = content.Load<SpriteFont>(@"SpriteFont2");
 
             //GUI
             cursor = content.Load<Texture2D>(@"Textures\GUI\cursor");
-            button_Wood = content.Load<Texture2D>(@"Textures\GUI\button_wood");
-            button_Rock = content.Load<Texture2D>(@"Textures\GUI\button_rock");
             GUI = content.Load<Texture2D>(@"Textures\GUI\gui");
 
         }
