@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Cythaldor
 {
-    class GameMain
+    class GamePlay
     {
 
         Map map;
@@ -19,7 +19,7 @@ namespace Cythaldor
         Player player;
 
 
-        public GameMain()
+        public GamePlay()
         {
 
             map = new Map();

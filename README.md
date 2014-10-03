@@ -20,6 +20,7 @@ Cythaldor
 Next Things To Do :
 ===================
 
+**- Rewrite all engine**
 - Add mods support.
 - Create new textures (buildings/ground/tree)
 - Create the GUI

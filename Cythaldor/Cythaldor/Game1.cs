@@ -16,7 +16,7 @@ namespace Cythaldor
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        GameMain main;
+        GamePlay main;
 
         public enum GameState
         {
@@ -36,7 +36,7 @@ namespace Cythaldor
             graphics.IsFullScreen = Settings.Window.FullScreen;
             graphics.ApplyChanges();
             gameState = GameState.GamePlay;
-            main = new GameMain();
+            main = new GamePlay();
         }
 
         protected override void Initialize()
