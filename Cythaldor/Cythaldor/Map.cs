@@ -48,6 +48,16 @@ namespace Cythaldor
                            y * Settings.Tile.Height - Camera.position.Y), GetSourceRectangle(TableObject[x, y].id), Color.White);
                 }
             }
+
+            if (Cursor.OverTileX != -1 && Cursor.OverTileY != -1 && !Cursor.CollideBox)
+            {
+                
+
+                spriteBatch.Draw(Resources.select, new Vector2(((float)Cursor.OverTileX * Settings.Tile.Width) - Camera.position.X,
+                    ((float)Cursor.OverTileY * Settings.Tile.Height) - Camera.position.Y),
+                    Color.White);
+            }
+
         }
 
         //GET THE SOURCE RECTANGLE FROM THE TILESET TEXTURE

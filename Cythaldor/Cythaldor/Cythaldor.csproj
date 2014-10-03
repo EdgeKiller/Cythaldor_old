@@ -77,7 +77,7 @@
     <Compile Include="Cursor.cs" />
     <Compile Include="GameMain.cs" />
     <Compile Include="GUI.cs" />
-    <Compile Include="Button.cs" />
+    <Compile Include="Box.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="PerlinSimplexNoise.cs" />
     <Compile Include="Player.cs" />

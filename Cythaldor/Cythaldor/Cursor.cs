@@ -19,6 +19,7 @@ namespace Cythaldor
         public static MouseState _mouse;
         public static Rectangle hitbox;
         public static Object OverObject;
+        public static bool CollideBox = false;
 
         public static void Update(MouseState mouse, GraphicsDeviceManager graphics)
         {
@@ -55,19 +56,28 @@ namespace Cythaldor
                 OverObject = null;
             }
 
+            bool collideBox = false;
+            foreach (Box box in GUI.buttons)
+            {
+                if(new Rectangle(_mouse.X, _mouse.Y, 1, 1).Intersects(box.rectangle))
+                {
+                    collideBox = true;
+                    CollideBox = true;
+                    break;
+                }
+                else
+                {
+                    collideBox = false;
+                    CollideBox = false;
+                }
+            }
 
 
         }
 
         public static void Draw(SpriteBatch spriteBatch)
         {
-            if (OverTileX != -1 && OverTileY != -1)
-            {
-                spriteBatch.Draw(Resources.select, new Vector2(((float)OverTileX * Settings.Tile.Width) - Camera.position.X,
-                    ((float)OverTileY * Settings.Tile.Height) - Camera.position.Y),
-                    Color.White);
-                
-            }
+            
             spriteBatch.Draw(Resources.cursor, new Vector2(_mouse.X, _mouse.Y), Settings.Cursor.color);
         }
     }

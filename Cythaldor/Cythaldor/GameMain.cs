@@ -18,8 +18,10 @@ namespace Cythaldor
         GUI gui;
         Player player;
 
+
         public GameMain()
         {
+
             map = new Map();
             gui = new GUI();
             player = new Player();
@@ -40,7 +42,6 @@ namespace Cythaldor
 
 
             Cursor.Draw(spriteBatch);
-
             if (Settings.Window.ShowGameInfos)
             {
                 spriteBatch.DrawString(Resources.font1, "TILE X : " + Cursor.OverTileX, Vector2.Zero, Color.White);
@@ -60,7 +61,7 @@ namespace Cythaldor
                 spriteBatch.DrawString(Resources.font1, "SEED : " + Map.seed.ToString(), new Vector2(0, 120), Color.White);
             }
 
-            spriteBatch.DrawString(Resources.font2, player.woodInventory.ToString(), new Vector2(gui.buttons[0].rectangle.X + 25, gui.buttons[0].rectangle.Y + 3), Color.Black);
+            spriteBatch.DrawString(Resources.font2, player.woodInventory.ToString(), new Vector2(GUI.buttons[0].rectangle.X + 25, GUI.buttons[0].rectangle.Y + 3), Color.Black);
 
             spriteBatch.End();
 

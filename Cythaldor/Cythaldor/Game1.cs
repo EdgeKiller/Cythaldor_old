@@ -18,6 +18,15 @@ namespace Cythaldor
 
         GameMain main;
 
+        public enum GameState
+        {
+            GameStart,
+            GameMenu,
+            GamePlay
+        }
+
+        GameState gameState = new GameState();
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -26,6 +35,7 @@ namespace Cythaldor
             graphics.PreferredBackBufferWidth = Settings.Window.Width;
             graphics.IsFullScreen = Settings.Window.FullScreen;
             graphics.ApplyChanges();
+            gameState = GameState.GamePlay;
             main = new GameMain();
         }
 
@@ -50,7 +60,19 @@ namespace Cythaldor
 
         protected override void Update(GameTime gameTime)
         {
-            main.Update(Keyboard.GetState(), Mouse.GetState(), gameTime, graphics);
+            if(gameState == GameState.GamePlay)
+            {
+                main.Update(Keyboard.GetState(), Mouse.GetState(), gameTime, graphics);
+            }
+            else if(gameState == GameState.GameStart)
+            {
+
+            }
+            else if (gameState == GameState.GameMenu)
+            {
+
+            }
+
             base.Update(gameTime);
         }
 

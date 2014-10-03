@@ -14,9 +14,7 @@ namespace Cythaldor
 {
     public class Player
     {
-
         public int woodInventory = 0;
-
         public int rockInventory = 0;
 
         public Player()

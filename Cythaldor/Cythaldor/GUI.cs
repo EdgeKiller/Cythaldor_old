@@ -15,7 +15,7 @@ namespace Cythaldor
     public class GUI
     {
 
-        public List<Button> buttons = new List<Button>();
+        public static List<Box> buttons = new List<Box>();
 
 
         public GUI()
@@ -24,13 +24,13 @@ namespace Cythaldor
             float woodRecWidth = (Settings.Window.Width * (100f / 1920f) * 2.0f);
             float woodRecHeight = (Settings.Window.Height * (25f / 1080f) * 2.0f);
             Rectangle woodRectangle = new Rectangle(15, 15, (int)woodRecWidth, (int)woodRecHeight);
-            buttons.Add(new Button(0, woodRectangle));
+            buttons.Add(new Box(0, woodRectangle));
 
             //ROCK BUTTON
             float rockRecWidth = (Settings.Window.Width * (100f / 1920f) * 2.0f);
             float rockRecHeight = (Settings.Window.Height * (25f / 1080f) * 2.0f);
             Rectangle rockRectangle = new Rectangle(30 + (int)woodRecWidth,  15, (int)rockRecWidth, (int)rockRecHeight);
-            buttons.Add(new Button(1, rockRectangle));
+            buttons.Add(new Box(1, rockRectangle));
 
 
         }
@@ -42,7 +42,7 @@ namespace Cythaldor
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach(Button button in buttons)
+            foreach(Box button in buttons)
             {
                 spriteBatch.Draw(Resources.GUI, button.rectangle, GetSourceRectangle(button.id), Color.White);
             }

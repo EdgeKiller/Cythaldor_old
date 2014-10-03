@@ -11,12 +11,12 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Cythaldor
 {
-    public class Button
+    public class Box
     {
         public Rectangle rectangle;
         public int id;
 
-        public Button(int id, Rectangle rectangle)
+        public Box(int id, Rectangle rectangle)
         {
             this.rectangle = rectangle;
             this.id = id;
